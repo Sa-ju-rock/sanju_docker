@@ -3,7 +3,7 @@
 a=7
 b=3
 
-def add(x,y);
+def add(x,y):
    return x+y
 result= add(a,b)
 
