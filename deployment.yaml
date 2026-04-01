@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: addition-app
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: addition
+  template:
+    metadata:
+      labels:
+        app: addition
+    spec:
+      containers:
+      - name: addition-container
+        image: shrabantide/addition-app:latest
+        ports:
+        - containerPort: 5000
